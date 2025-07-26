@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Van's Time Traveler Portfolio</title>
+
+  <!-- Font & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+<!-- Dashboard Container -->
+<div class="dashboard">
+  
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- Navigation Sidebar -->
+  <nav>
+    <div class="nav_wrapper">
+      <ul class="nav_icons">
+        <li>
+          <div class="nav_item">
+            <a href="#" title="Origin Era" data-modal="about"><i class="fas fa-user"></i></a>
+          </div>
+        </li>
+        <li>
+          <div class="nav_item">
+            <a href="#" title="Future Inventions" data-modal="projects"><i class="fas fa-briefcase"></i></a>
+          </div>
+        </li>
+        <li>
+          <div class="nav_item">
+            <a href="#" title="Tech Revolution" data-modal="skills"><i class="fas fa-code"></i></a>
+          </div>
+        </li>
+        <li>
+          <div class="nav_item">
+            <a href="#" title="Time Logs" data-modal="blog"><i class="fas fa-blog"></i></a>
+          </div>
+        </li>
+        <li>
+          <div class="nav_item">
+            <a href="#" title="Connect Across Time" data-modal="contact"><i class="fas fa-envelope"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Welcome Section (Hero) -->
+  <section class="section" id="home">
+    <h1>Welcome, Time Traveler.</h1>
+    <p><span id="typing"></span></p>
+    <p>Explore the timeline of Van April's tech journey.</p>
+  </section>
+
+  <!-- Modal Boxes -->
+
+<!-- 🌟 ABOUT MODAL -->
+<div id="modal-about" class="modal">
+  <div class="modal_content">
+    <span class="close_btn">&times;</span>
+    <h2>ABOUT</h2>
+    <div class="about-profile-container">
+      <img 
+        src="ed22b16f-92ae-42ac-b3bb-3031454b3da5.jpg" 
+        alt="Van April Constantino" 
+        class="about-profile-img"
+      />
+      <p class="about-description">
+        I'm <strong>Van April Constantino</strong>, a passionate BSIT student from 
+        Saint Mary's College of Bansalan Inc. I love blending creativity and tech 
+        in every digital journey I take!
+      </p>
+      <button id="btn-show-hobbies" class="btn">Show Hobbies</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🎨 HOBBIES MODAL (Floating Parent) -->
+<div id="modal-hobbies" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h3>My Hobbies</h3>
+    <div class="hobby-list">
+      <button class="hobby-btn" data-modal="modal-hobby-drawing">Drawing</button>
+      <button class="hobby-btn" data-modal="modal-hobby-gaming">Gaming</button>
+      <button class="hobby-btn" data-modal="modal-hobby-coding">Coding</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🎨 Drawing Modal -->
+<div id="modal-hobby-drawing" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h4>Drawing</h4>
+    <p>I started drawing since I was young — it helps me express creativity and emotions.</p>
+  </div>
+</div>
+
+<!-- 🎮 Gaming Modal -->
+<div id="modal-hobby-gaming" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h4>Gaming</h4>
+    <p>Gaming helps me relieve stress and improve my problem-solving skills.</p>
+  </div>
+</div>
+
+<!-- 💻 Coding Modal -->
+<div id="modal-hobby-coding" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h4>Coding</h4>
+    <p>I discovered coding in high school, and now it's part of my dream career in IT.</p>
+  </div>
+</div>
+
+<!-- 💼 PROJECTS MODAL -->
+<div id="modal-projects" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h4>Projects</h4>
+    <p>These are some of the interactive web projects I’ve built — blending code with creativity and passion!</p>
+    <div class="about-profile-container">
+      <img 
+        src="voting.PNG" 
+        alt="Van April Constantino" 
+        class="about-profile-img"
+      />
+    <ul>
+      <li>🌐 Portfolio Website</li>
+      <li>🎮 2D Ping Pong Game (Arduino + Godot)</li>
+      <li>📱 Bisaya</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 🛠 SKILLS MODAL -->
+<div id="modal-skills" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h4>Skills</h4>
+    <p>Here are some of the technical and creative skills I've gained throughout my journey:</p>
+    <ul>
+      <li>💻 Front-End Development (HTML, CSS, JavaScript, Bootstrap)</li>
+      <li>🎨 UI/UX Design and Interactive Prototyping</li>
+      <li>🕹 Game Development (Godot Engine)</li>
+      <li>🔌 Arduino & Microcontroller Integration</li>
+      <li>🧠 Problem Solving and Debugging</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ✍️ BLOG MODAL -->
+<div id="modal-blog" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h4>Blog</h4>
+    <p>Welcome to my blog! Here, I share insights, reflections, and tips on web development, creative coding, and my personal journey in tech.</p>
+    <ul>
+      <li>📘 How I Built My Portfolio Website</li>
+      <li>🔌 Integrating Arduino with Web Interfaces</li>
+      <li>🎮 Designing Game Controllers for Godot</li>
+      <li>💡 Student Life: Balancing Code & Creativity</li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+<!-- 📩 CONTACT FLOATING MODAL -->
+<div id="modal-contact" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h3>Contact Me</h3>
+    <p>Feel free to reach out if you have questions, projects, or just want to connect!</p>
+    <ul class="contact-info">
+      <li>📧 Email: vanapril@example.com</li>
+      <li>📱 Phone: +63 912 345 6789</li>
+      <li>🌐 Portfolio: www.vanapril.dev</li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

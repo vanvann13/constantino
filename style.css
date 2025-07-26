@@ -1,0 +1,281 @@
+/* === Reset & Base Styles === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Orbitron', sans-serif;
+  color: #c9d1d9;
+  background: transparent;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.hidden {
+  display: none;
+}
+
+/* === Background === */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: #0d1117;
+}
+
+/* === Navigation === */
+.nav_wrapper {
+  border: 2px solid #1fb6ff;
+  padding: 15px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 0 10px #1fb6ff, 0 0 20px #1fb6ff;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.nav_icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 0;
+  margin: 0;
+  background-color: #111;
+}
+
+.nav_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+  text-align: center;
+}
+
+.nav_item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: 0.3s ease;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.nav_item a:hover {
+  transform: scale(1.2);
+  color: #1fb6ff;
+  box-shadow: 0 0 10px #1fb6ff, 0 0 20px #1fb6ff;
+}
+
+/* === Dashboard === */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  position: relative;
+  z-index: 5;
+}
+
+/* === Section Styles === */
+.section {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.section h1 {
+  font-size: 3.2rem;
+  color: #1fb6ff;
+  margin-bottom: 24px;
+  letter-spacing: 1.5px;
+  animation: glow 2.5s ease-in-out infinite;
+  text-shadow: 0 0 8px #1fb6ff;
+}
+
+
+.floating-modal-content h3, 
+.modal_content h2{
+  font-size: 1.2rem;
+  color: #1fb6ff;
+  margin-bottom: 24px;
+  letter-spacing: 1.5px;
+  animation: glow 2.5s ease-in-out infinite;
+  text-shadow: 0 0 8px #1fb6ff;
+}
+
+.section p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #c9d1d9d6;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.section a {
+  color: #1fb6ff;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.section a:hover {
+  color: #58d1ff;
+  text-decoration: none;
+}
+
+/* === Modals === */
+.modal,
+.floating-modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.modal_content,
+.floating-modal-content {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  border: 2px solid #1fb6ff;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 25px #1fb6ff88;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+/* === Close Button === */
+.close_btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.close_btn:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* === About Section === */
+.about-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.about-profile-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #1fb6ff;
+  box-shadow: 0 0 10px #1fb6ff88;
+}
+
+.about-description {
+  text-align: center;
+  max-width: 300px;
+  font-size: 1rem;
+  color: #c9d1d9;
+  margin: 10px 0;
+}
+
+/* === Buttons === */
+.btn,
+.hobby-btn {
+  background-color: #1e90ff;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.btn:hover,
+.hobby-btn:hover {
+  background-color: #0d6efd;
+}
+
+/* === Hobbies Modal === */
+.hobby-display {
+  border: none;
+  box-shadow: none;
+  margin-top: 15px;
+  font-size: 15px;
+  font-style: italic;
+  color: #c9d1d9;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px #1fb6ff;
+  }
+  50% {
+    text-shadow: 0 0 25px #1fb6ff;
+  }
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.scrollable-projects {
+  max-height: 80vh; /* Adjust height as needed */
+  overflow-y: auto;
+  padding-right: 10px; /* space for scrollbar */
+}

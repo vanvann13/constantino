@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Van's Portfolio</title>
+
+  <!-- Font & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+<!-- Dashboard Container -->
+<div class="dashboard">
+  
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- Navigation Sidebar -->
+  <nav>
+    <div class="nav_wrapper">
+      <ul class="nav_icons">
+        <li>
+          <div class="nav_item">
+            <a href="#" title="Origin Era" data-modal="about"><i class="fas fa-user"></i></a>
+          </div>
+        </li>
+        <li>
+          <div class="nav_item">
+            <a href="#" title="Future Inventions" data-modal="projects"><i class="fas fa-briefcase"></i></a>
+          </div>
+        </li>
+        <li>
+          <div class="nav_item">
+            <a href="#" title="Tech Revolution" data-modal="skills"><i class="fas fa-code"></i></a>
+          </div>
+        </li>
+        <li>
+          <div class="nav_item">
+            <a href="#" title="Time Logs" data-modal="blog"><i class="fas fa-blog"></i></a>
+          </div>
+        </li>
+        <li>
+          <div class="nav_item">
+            <a href="#" title="Connect Across Time" data-modal="contact"><i class="fas fa-envelope"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Welcome Section (Hero) -->
+  <section class="section" id="home">
+    <h1>Hello, I am Van April</h1>
+    <p><span id="typing"></span></p>
+    
+  </section>
+
+  <!-- Modal Boxes -->
+
+<!-- 🌟 ABOUT MODAL -->
+<div id="modal-about" class="modal">
+  <div class="modal_content">
+    <span class="close_btn">&times;</span>
+    <h2>ABOUT</h2>
+    <div class="about-profile-container">
+      <img 
+        src="ed22b16f-92ae-42ac-b3bb-3031454b3da5.jpg" 
+        alt="Van April Constantino" 
+        class="about-profile-img"
+      />
+      <p class="about-description">
+        I'm <strong>Van April Constantino</strong>, an Information Technology student at Saint Mary's College of Bansalan Inc. I enjoy learning about computers, how they work, and how to solve technical problems. I can create programs using Java and design websites using HTML and CSs. I also have skills in using databases to store and manage data. I know how to fix basic computer issues and understand simple cybersecurity concepts. I like working with others and completing tasks on time. I always do my best to improve and learn new things. 
+        My goal is to become a skilled and confident rofessional in the future.
+      </p>
+      <button id="btn-show-hobbies" class="btn">Show Hobbies</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🎨 HOBBIES MODAL (Floating Parent) -->
+<div id="modal-hobbies" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h3>My Hobbies</h3>
+    <div class="hobby-list">
+      <button class="hobby-btn" data-modal="modal-hobby-drawing">Drawing</button>
+      <button class="hobby-btn" data-modal="modal-hobby-gaming">Gaming</button>
+      <button class="hobby-btn" data-modal="modal-hobby-coding">Coding</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🎨 Drawing Modal -->
+<div id="modal-hobby-drawing" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h4>Drawing</h4>
+    <p>I started drawing since I was young — it helps me express creativity and emotions.</p>
+  </div>
+</div>
+
+<!-- 🎮 Gaming Modal -->
+<div id="modal-hobby-gaming" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h4>Gaming</h4>
+    <p>Gaming helps me relieve stress and improve my problem-solving skills.</p>
+  </div>
+</div>
+
+<!-- 💻 Coding Modal -->
+<div id="modal-hobby-coding" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h4>Coding</h4>
+    <p>I discovered coding in high school, and now it's part of my dream career in IT.</p>
+  </div>
+</div>
+
+<!-- 💼 PROJECTS MODAL -->
+<div id="modal-projects" class="floating-modal">
+  <div class="floating-modal-content scrollable-projects animate__animated animate__fadeInUp">
+    <span class="close_btn">&times;</span>
+    <h3>Projects</h3>
+
+ 
+
+
+
+    <hr style="margin: 15px 0; border-color: #444;" />
+
+    <!-- Voting System -->
+    <h4>🗳️ Voting System</h4>
+    <img src="voting.png" alt="Voting System Project" class="project-photo" />
+      <p>
+      One of my projects is making a simple Voting System for School elections. I started it in first year and made it better each year.
+    </p>
+
+    <br>
+    <br>
+    <!-- Pacman Lite -->
+    <h4>🎮 Pacman Lite 3D (Minecraft Version)</h4>
+    <img src="1000002455 (1).jpg" alt="Pacman 3D Project" class="project-photo" />
+    <p>
+      Since second year college, I started making 2D games using Godot Engine. This project helped me learn game design, coding, and how to make fun and interactive games.
+    </p>
+  </div>
+</div>
+
+
+<!-- 🛠 SKILLS MODAL -->
+<div id="modal-skills" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h3>Skills</h3><br>
+    <p>Game Development (Godot/Unity)</p>
+    <p>Making fun and interactive games for people to play</p><br>
+    <p>System analysis</p>
+    <p>checking how a system works and making it better.</p><br>
+    <p>Networking</p>
+    <p>Connecting computers so they can share files or internet.</p><br>
+    <p>Java Programming</p>
+    <p>Used to make apps, website, or games using Java language</p>
+  
+  </div>
+</div>
+
+<!-- ✍️ BLOG MODAL -->
+<div id="modal-blog" class="floating-modal">
+  <div class="floating-modal-content">
+    <span class="close_btn">&times;</span>
+    <h3>Blog</h3><br>
+    <p>I am Van April Coinstantino BSIT student From Saint Mary's College of Bansalan Inc.I learned skills like Java programming, Web development using Godot. These skills help me grow in IT and prepare for real project in the future.</p>
+    
+  </div>
+</div>
+
+
+
+
+<!-- 📩 CONTACT FLOATING MODAL -->
+<div id="modal-contact" class="floating-modal">
+  <div class="floating-modal-content animate__animated animate__fadeInUp">
+    <span class="close_btn">&times;</span>
+    <h3>Contact Me</h3>
+    <p>Let's connect through any of the platforms below:</p>
+    <ul class="contact-info">
+      <!-- Email -->
+      <li>
+        <a href="mailto:vanapril@example.com" target="_blank">
+          <img src="gmail.png" alt="Email" class="contact-icon" />
+          vanapril@example.com
+        </a>
+      </li>
+
+      <!-- Facebook -->
+      <li>
+        <a href="https://www.facebook.com/yourusername" target="_blank">
+          <img src="facebook.png" alt="Facebook" class="contact-icon" />
+          facebook.com/Van April
+        </a>
+      </li>
+
+      <!-- Instagram -->
+      <li>
+        <a href="https://www.instagram.com/yourusername" target="_blank">
+          <img src="instagram.png" alt="Instagram" class="contact-icon" />
+          @Van april
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<script>
+  // Example toggle logic
+  document.querySelector('.close_btn').addEventListener('click', () => {
+    document.getElementById('modal-contact').style.display = 'none';
+  });
+
+  // You can trigger this with a button or event
+  function showContactModal() {
+    document.getElementById('modal-contact').style.display = 'block';
+  }
+</script>
+
+
+
+
+<!-- Audio Feedback -->
+<audio id="clickSound" src="mixkit-water-sci-fi-bleep-902.wav" preload="auto"></audio>
+
+<!-- Particle.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+  // Particles background
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 } },
+      color: { value: "#1fb6ff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3, random: true },
+      line_linked: { enable: true, distance: 150, color: "#1fb6ff", opacity: 0.4, width: 1 },
+      move: { enable: true, speed: 3 }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
+      modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, push: { particles_nb: 4 } }
+    },
+    retina_detect: true
+  });
+
+  // Typing animation
+  const texts = ["Hello I am", "Van April Constantino", "From Saint Mary's College of Bansalan Inc.", "Front-End Explorer", "BSIT Student"];
+  let count = 0, index = 0, currentText = '', letter = '';
+  (function type() {
+    if (count === texts.length) count = 0;
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+    document.getElementById('typing').textContent = letter;
+    if (letter.length === currentText.length) {
+      count++; index = 0;
+      setTimeout(type, 2000);
+    } else {
+      setTimeout(type, 150);
+    }
+  })();
+
+  // Modal handling (FIXED)
+document.querySelectorAll('.nav_icons a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const key = link.getAttribute('data-modal'); // like 'about'
+    const modalId = `modal-${key}`; // becomes 'modal-about'
+    const modal = document.getElementById(modalId);
+    if (modal) modal.style.display = 'flex';
+  });
+});
+
+  // Audio click feedback
+  const clickSound = document.getElementById("clickSound");
+  document.body.addEventListener("click", function unlockOnce() {
+    clickSound.play().catch(() => {});
+    document.body.removeEventListener("click", unlockOnce);
+  });
+  document.querySelectorAll("button, a, .close_btn").forEach(el => {
+    el.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Close all modals
+    function closeAllModals() {
+      document.querySelectorAll(".modal, .floating-modal").forEach(modal => {
+        modal.style.display = "none";
+      });
+    }
+
+// Open modal via [data-modal] — EXCLUDING hobby buttons
+document.querySelectorAll("[data-modal]").forEach(button => {
+  // Skip hobby buttons to prevent closing modal-hobbies
+  if (button.classList.contains("hobby-btn")) return;
+
+  button.addEventListener("click", () => {
+    const modalId = button.getAttribute("data-modal");
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      closeAllModals();
+      modal.style.display = "flex";
+    }
+  });
+});
+
+
+    // Close when clicking .close_btn
+    document.querySelectorAll(".close_btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.closest(".modal, .floating-modal").style.display = "none";
+      });
+    });
+
+    // Close when clicking outside modal content
+    window.addEventListener("click", (e) => {
+      document.querySelectorAll(".modal, .floating-modal").forEach(modal => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+
+
+  // Handle Hobbies logic (Fixed: Don't close About modal)
+const btnShowHobbies = document.getElementById("btn-show-hobbies");
+const modalHobbies = document.getElementById("modal-hobbies");
+
+if (btnShowHobbies && modalHobbies) {
+  btnShowHobbies.addEventListener("click", () => {
+    modalHobbies.style.display = "flex";
+  });
+}
+
+document.querySelectorAll(".hobby-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const hobbyModalId = button.getAttribute("data-modal");
+    const hobbyModal = document.getElementById(hobbyModalId);
+
+    if (hobbyModal) {
+      // Optional: close other hobby modals except the one being opened
+      document.querySelectorAll(".floating-modal").forEach(modal => {
+        if (modal.id.startsWith("modal-hobby-") && modal !== hobbyModal) {
+          modal.style.display = "none";
+        }
+      });
+
+      // Show the selected hobby modal WITHOUT closing the Hobbies modal
+      hobbyModal.style.display = "flex";
+    }
+  });
+});
+
+
+
+    // Contact Button (if exists)
+    const contactBtn = document.getElementById("btn-show-contact");
+    const contactModal = document.getElementById("modal-contact");
+
+    if (contactBtn && contactModal) {
+      contactBtn.addEventListener("click", () => {
+        closeAllModals();
+        contactModal.style.display = "flex";
+      });
+    }
+  });
+</script>
